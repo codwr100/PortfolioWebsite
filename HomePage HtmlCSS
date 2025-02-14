@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            transition: background 0.3s, color 0.3s;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #222;
+            padding: 15px 30px;
+            color: white;
+            font-size: 18px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .toggle-btn {
+            background: none;
+            border: 1px solid white;
+            color: white;
+            padding: 8px 12px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .languages, .contact, .projects {
+            flex: 1;
+            padding: 20px;
+        }
+        .languages h2, .contact h2, .projects button {
+            font-size: 20px;
+        }
+        .projects-btn {
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .projects-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <button class="toggle-btn" onclick="toggleTheme()">Toggle Black/White</button>
+    </div>
+
+    <div class="container">
+        <h1>Welcome to My Portfolio</h1>
+        
+        <div class="content">
+            <div class="languages">
+                <h2>Current Languages</h2>
+                <p>HTML, Java, CSS, Python, React, SQL</p>
+            </div>
+            
+            <div class="contact">
+                <h2>Contact Me</h2>
+                <p>Email: davidbadar11@gmail.com</p>
+                <p>Phone Number: 0896121427</p>
+            </div>
+            
+            <div class="projects">
+                <button class="projects-btn" onclick="location.href='http://127.0.0.1:5500/portfolio.html'">View Projects</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            document.body.style.background = document.body.style.background === 'black' ? 'white' : 'black';
+            document.body.style.color = document.body.style.color === 'white' ? 'black' : 'white';
+        }
+    </script>
+</body>
+</html>
