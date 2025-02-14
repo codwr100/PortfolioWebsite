@@ -1,1 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            transition: background 0.3s, color 0.3s;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #222;
+            padding: 15px 30px;
+            color: white;
+            font-size: 18px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .toggle-btn {
+            background: none;
+            border: 1px solid white;
+            color: white;
+            padding: 8px 12px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .container {
+            text-align: center;
+            margin: 40px auto;
+            max-width: 1200px;
+        }
+        .projects {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .project {
+            text-align: center;
+            max-width: 250px;
+            transition: transform 0.3s ease;
+        }
+        .project h2 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        .project p {
+            font-size: 16px;
+            color: #555;
+        }
+        .project button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .project button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="http://127.0.0.1:5500/website.html">Home</a>
+        <button class="toggle-btn" onclick="toggleTheme()">Toggle Black/White</button>
+    </div>
+
+    <div class="container">
+        <h1>Projects</h1>
+        
+        <div class="projects">
+            <div class="project">
+                <h2>Hand Tracker in Python</h2>
+                <p>Built a Hand Tracker in Python, its able to map up to 2 hands and identify whether its your left or right hand</p>
+                <button onclick="location.href='https://github.com/codwr100/PythonHandTracker'">View Github</button>
+            </div>
+            
+            <div class="project">
+                <h2>Photo Recognition in Python</h2>
+                <p>I created a program to detect specific colors in specific positions in java.I augmented this code to move the computer mouse and click on a specific color in a specific position once found</p>
+                <button onclick="location.href='https://github.com/codwr100/PythonPhotoRecognition'">View Github</button>
+            </div>
+            
+            <div class="project">
+                <h2>Banking System in Java</h2>
+                <p>I created a secure and scalable backend system for a bank, built using Java. I created this system to allow banks to handle user management, account management, transactions.</p>
+                <button onclick="location.href='https://github.com/codwr100/JavaBankingSystem'">View Github</button>
+            </div>
+            
+            <div class="project">
+                <h2>Airline System in Java</h2>
+                <p>I created a backend flight reservation system built in Java this design was made to help airlines manage flight itineraries, add new flights, and reserve seats for passengers.</p>
+                <button onclick="location.href='https://github.com/codwr100/JavaAirlineSystem'">View Github</button>
+            </div>
+            <div class="project">
+                <h2>Project 5 Title</h2>
+                <p>I created my own portfolio using HTML, CSS, and JavaScript.</p>
+                <button onclick="location.href='https://github.com/codwr100/PortfolioWebsite/tree/main'">View Github</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            document.body.style.background = document.body.style.background === 'black' ? 'white' : 'black';
+            document.body.style.color = document.body.style.color === 'white' ? 'black' : 'white';
+        }
+
+        document.querySelectorAll('.project').forEach(project => {
+            project.addEventListener('mouseover', () => {
+                project.style.transform = 'scale(1.1)';
+            });
+            project.addEventListener('mouseout', () => {
+                project.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
 
